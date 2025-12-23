@@ -1,0 +1,646 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * ODESTA DESIGN SYSTEM
+ * CDV Parcel Intelligence Platform
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * A dark, sophisticated design system featuring glassmorphism,
+ * subtle animations, and premium typography.
+ * 
+ * Usage: @import './odesta-design-system.css';
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ─────────────────────────────────────────────────────────────────────
+       COLORS - Background
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-bg-primary: #0a0a0f;
+    --odesta-bg-secondary: #12121a;
+    --odesta-bg-tertiary: #1a1a26;
+    --odesta-bg-card: rgba(18, 18, 26, 0.85);
+    --odesta-bg-elevated: rgba(26, 26, 38, 0.9);
+    --odesta-bg-overlay: rgba(10, 10, 15, 0.8);
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       COLORS - Accent
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-accent-primary: #00d4aa;
+    --odesta-accent-secondary: #00b894;
+    --odesta-accent-tertiary: #00a381;
+    --odesta-accent-glow: rgba(0, 212, 170, 0.3);
+    --odesta-accent-subtle: rgba(0, 212, 170, 0.1);
+    
+    /* Secondary accents */
+    --odesta-orange: #ff6b35;
+    --odesta-orange-glow: rgba(255, 107, 53, 0.3);
+    --odesta-blue: #4ecdc4;
+    --odesta-blue-glow: rgba(78, 205, 196, 0.3);
+    --odesta-purple: #a855f7;
+    --odesta-purple-glow: rgba(168, 85, 247, 0.3);
+    --odesta-red: #ef4444;
+    --odesta-red-glow: rgba(239, 68, 68, 0.3);
+    --odesta-yellow: #fbbf24;
+    --odesta-yellow-glow: rgba(251, 191, 36, 0.3);
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       COLORS - Text
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-text-primary: #f0f0f5;
+    --odesta-text-secondary: #9090a0;
+    --odesta-text-muted: #606070;
+    --odesta-text-disabled: #404050;
+    --odesta-text-inverse: #0a0a0f;
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       COLORS - Borders & Lines
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-border: rgba(255, 255, 255, 0.08);
+    --odesta-border-strong: rgba(255, 255, 255, 0.15);
+    --odesta-border-glow: rgba(0, 212, 170, 0.5);
+    --odesta-border-subtle: rgba(255, 255, 255, 0.04);
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       COLORS - Status
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-status-success: #00d4aa;
+    --odesta-status-warning: #fbbf24;
+    --odesta-status-error: #ef4444;
+    --odesta-status-info: #4ecdc4;
+    --odesta-status-pending: #ff6b35;
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       TYPOGRAPHY
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-font-ui: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --odesta-font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    --odesta-font-display: 'Outfit', sans-serif;
+    
+    /* Font sizes */
+    --odesta-text-xs: 11px;
+    --odesta-text-sm: 12px;
+    --odesta-text-base: 14px;
+    --odesta-text-md: 15px;
+    --odesta-text-lg: 18px;
+    --odesta-text-xl: 20px;
+    --odesta-text-2xl: 24px;
+    --odesta-text-3xl: 30px;
+    --odesta-text-4xl: 36px;
+    
+    /* Font weights */
+    --odesta-font-light: 300;
+    --odesta-font-normal: 400;
+    --odesta-font-medium: 500;
+    --odesta-font-semibold: 600;
+    --odesta-font-bold: 700;
+    
+    /* Line heights */
+    --odesta-leading-tight: 1.2;
+    --odesta-leading-snug: 1.35;
+    --odesta-leading-normal: 1.5;
+    --odesta-leading-relaxed: 1.65;
+    
+    /* Letter spacing */
+    --odesta-tracking-tight: -0.02em;
+    --odesta-tracking-normal: 0;
+    --odesta-tracking-wide: 0.05em;
+    --odesta-tracking-wider: 0.1em;
+    --odesta-tracking-widest: 0.15em;
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       SPACING
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-space-xs: 4px;
+    --odesta-space-sm: 8px;
+    --odesta-space-md: 12px;
+    --odesta-space-lg: 16px;
+    --odesta-space-xl: 20px;
+    --odesta-space-2xl: 24px;
+    --odesta-space-3xl: 32px;
+    --odesta-space-4xl: 40px;
+    --odesta-space-5xl: 48px;
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       BORDER RADIUS
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-radius-sm: 6px;
+    --odesta-radius-md: 10px;
+    --odesta-radius-lg: 14px;
+    --odesta-radius-xl: 20px;
+    --odesta-radius-2xl: 24px;
+    --odesta-radius-full: 9999px;
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       SHADOWS & EFFECTS
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --odesta-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --odesta-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --odesta-shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.5);
+    --odesta-shadow-glow: 0 0 30px var(--odesta-accent-glow);
+    --odesta-shadow-glow-orange: 0 0 30px var(--odesta-orange-glow);
+    
+    /* Glassmorphism */
+    --odesta-blur-sm: blur(8px);
+    --odesta-blur-md: blur(16px);
+    --odesta-blur-lg: blur(24px);
+    --odesta-blur-xl: blur(32px);
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       TRANSITIONS
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-transition-fast: 0.15s ease;
+    --odesta-transition-base: 0.2s ease;
+    --odesta-transition-slow: 0.3s ease;
+    --odesta-transition-slower: 0.4s ease;
+    --odesta-transition-spring: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --odesta-transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* ─────────────────────────────────────────────────────────────────────
+       Z-INDEX SCALE
+       ───────────────────────────────────────────────────────────────────── */
+    --odesta-z-base: 0;
+    --odesta-z-above: 10;
+    --odesta-z-dropdown: 50;
+    --odesta-z-sticky: 100;
+    --odesta-z-overlay: 500;
+    --odesta-z-modal: 1000;
+    --odesta-z-toast: 1500;
+    --odesta-z-tooltip: 2000;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.odesta-base {
+    font-family: var(--odesta-font-ui);
+    background: var(--odesta-bg-primary);
+    color: var(--odesta-text-primary);
+    line-height: var(--odesta-leading-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Card
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-card {
+    background: var(--odesta-bg-card);
+    backdrop-filter: var(--odesta-blur-lg);
+    -webkit-backdrop-filter: var(--odesta-blur-lg);
+    border: 1px solid var(--odesta-border);
+    border-radius: var(--odesta-radius-xl);
+    padding: var(--odesta-space-2xl);
+    transition: var(--odesta-transition-base);
+}
+
+.odesta-card:hover {
+    border-color: var(--odesta-border-strong);
+}
+
+.odesta-card--interactive:hover {
+    border-color: var(--odesta-accent-primary);
+    box-shadow: var(--odesta-shadow-glow);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Button
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--odesta-space-sm);
+    padding: var(--odesta-space-md) var(--odesta-space-lg);
+    font-family: var(--odesta-font-ui);
+    font-size: var(--odesta-text-base);
+    font-weight: var(--odesta-font-medium);
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: var(--odesta-radius-md);
+    cursor: pointer;
+    transition: var(--odesta-transition-base);
+    text-decoration: none;
+}
+
+.odesta-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Primary Button */
+.odesta-btn--primary {
+    background: linear-gradient(135deg, var(--odesta-accent-primary) 0%, var(--odesta-accent-secondary) 100%);
+    color: var(--odesta-text-inverse);
+    border-color: var(--odesta-accent-primary);
+}
+
+.odesta-btn--primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--odesta-shadow-glow);
+}
+
+/* Secondary Button */
+.odesta-btn--secondary {
+    background: var(--odesta-bg-tertiary);
+    color: var(--odesta-text-primary);
+    border-color: var(--odesta-border);
+}
+
+.odesta-btn--secondary:hover:not(:disabled) {
+    background: var(--odesta-bg-elevated);
+    border-color: var(--odesta-accent-primary);
+}
+
+/* Ghost Button */
+.odesta-btn--ghost {
+    background: transparent;
+    color: var(--odesta-text-secondary);
+    border-color: transparent;
+}
+
+.odesta-btn--ghost:hover:not(:disabled) {
+    background: var(--odesta-bg-tertiary);
+    color: var(--odesta-text-primary);
+}
+
+/* Sizes */
+.odesta-btn--sm {
+    padding: var(--odesta-space-sm) var(--odesta-space-md);
+    font-size: var(--odesta-text-sm);
+    border-radius: var(--odesta-radius-sm);
+}
+
+.odesta-btn--lg {
+    padding: var(--odesta-space-lg) var(--odesta-space-xl);
+    font-size: var(--odesta-text-md);
+    border-radius: var(--odesta-radius-lg);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Input
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-input {
+    width: 100%;
+    padding: var(--odesta-space-lg) var(--odesta-space-xl);
+    background: var(--odesta-bg-card);
+    backdrop-filter: var(--odesta-blur-md);
+    border: 1px solid var(--odesta-border);
+    border-radius: var(--odesta-radius-lg);
+    color: var(--odesta-text-primary);
+    font-family: var(--odesta-font-ui);
+    font-size: var(--odesta-text-md);
+    outline: none;
+    transition: var(--odesta-transition-base);
+}
+
+.odesta-input::placeholder {
+    color: var(--odesta-text-muted);
+}
+
+.odesta-input:focus {
+    border-color: var(--odesta-border-glow);
+    box-shadow: var(--odesta-shadow-glow);
+}
+
+.odesta-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Badge / Status
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--odesta-space-xs);
+    padding: var(--odesta-space-xs) var(--odesta-space-md);
+    font-size: var(--odesta-text-sm);
+    font-weight: var(--odesta-font-medium);
+    border-radius: var(--odesta-radius-full);
+}
+
+.odesta-badge--success {
+    background: rgba(0, 212, 170, 0.15);
+    color: var(--odesta-status-success);
+}
+
+.odesta-badge--warning {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--odesta-status-warning);
+}
+
+.odesta-badge--error {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--odesta-status-error);
+}
+
+.odesta-badge--pending {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--odesta-status-pending);
+}
+
+.odesta-badge--info {
+    background: rgba(78, 205, 196, 0.15);
+    color: var(--odesta-status-info);
+}
+
+/* Status Dot */
+.odesta-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--odesta-text-muted);
+}
+
+.odesta-status-dot--success {
+    background: var(--odesta-status-success);
+}
+
+.odesta-status-dot--warning {
+    background: var(--odesta-status-warning);
+}
+
+.odesta-status-dot--error {
+    background: var(--odesta-status-error);
+}
+
+.odesta-status-dot--pending {
+    background: var(--odesta-status-pending);
+}
+
+.odesta-status-dot--pulse {
+    animation: odesta-pulse 2s ease-in-out infinite;
+}
+
+@keyframes odesta-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Data Display
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-data-value {
+    font-family: var(--odesta-font-mono);
+    font-size: var(--odesta-text-2xl);
+    font-weight: var(--odesta-font-semibold);
+    color: var(--odesta-accent-primary);
+    line-height: var(--odesta-leading-tight);
+}
+
+.odesta-data-value--sm {
+    font-size: var(--odesta-text-base);
+}
+
+.odesta-data-value--lg {
+    font-size: var(--odesta-text-3xl);
+}
+
+.odesta-data-label {
+    font-size: var(--odesta-text-sm);
+    color: var(--odesta-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--odesta-tracking-wide);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Section Label
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-section-label {
+    display: flex;
+    align-items: center;
+    gap: var(--odesta-space-sm);
+    font-size: var(--odesta-text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--odesta-tracking-wider);
+    color: var(--odesta-text-muted);
+    margin-bottom: var(--odesta-space-md);
+}
+
+.odesta-section-label::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--odesta-accent-primary);
+    border-radius: 50%;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Panel
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-panel {
+    background: var(--odesta-bg-card);
+    backdrop-filter: var(--odesta-blur-xl);
+    -webkit-backdrop-filter: var(--odesta-blur-xl);
+    border: 1px solid var(--odesta-border);
+    border-radius: var(--odesta-radius-xl);
+    overflow: hidden;
+}
+
+.odesta-panel__header {
+    padding: var(--odesta-space-2xl);
+    border-bottom: 1px solid var(--odesta-border);
+}
+
+.odesta-panel__content {
+    padding: var(--odesta-space-2xl);
+}
+
+.odesta-panel__footer {
+    padding: var(--odesta-space-xl) var(--odesta-space-2xl);
+    border-top: 1px solid var(--odesta-border);
+    display: flex;
+    gap: var(--odesta-space-md);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Info Row
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--odesta-space-md) 0;
+    border-bottom: 1px solid var(--odesta-border);
+}
+
+.odesta-info-row:last-child {
+    border-bottom: none;
+}
+
+.odesta-info-row__label {
+    color: var(--odesta-text-secondary);
+    font-size: var(--odesta-text-base);
+}
+
+.odesta-info-row__value {
+    font-family: var(--odesta-font-mono);
+    font-size: var(--odesta-text-base);
+    color: var(--odesta-text-primary);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPONENT: Loader
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.odesta-loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--odesta-border);
+    border-top-color: var(--odesta-accent-primary);
+    border-radius: 50%;
+    animation: odesta-spin 1s linear infinite;
+}
+
+.odesta-loader--sm {
+    width: 24px;
+    height: 24px;
+    border-width: 2px;
+}
+
+.odesta-loader--lg {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+}
+
+@keyframes odesta-spin {
+    to { transform: rotate(360deg); }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Text colors */
+.odesta-text-primary { color: var(--odesta-text-primary); }
+.odesta-text-secondary { color: var(--odesta-text-secondary); }
+.odesta-text-muted { color: var(--odesta-text-muted); }
+.odesta-text-accent { color: var(--odesta-accent-primary); }
+.odesta-text-success { color: var(--odesta-status-success); }
+.odesta-text-warning { color: var(--odesta-status-warning); }
+.odesta-text-error { color: var(--odesta-status-error); }
+
+/* Background colors */
+.odesta-bg-primary { background: var(--odesta-bg-primary); }
+.odesta-bg-secondary { background: var(--odesta-bg-secondary); }
+.odesta-bg-tertiary { background: var(--odesta-bg-tertiary); }
+.odesta-bg-card { background: var(--odesta-bg-card); }
+
+/* Fonts */
+.odesta-font-ui { font-family: var(--odesta-font-ui); }
+.odesta-font-mono { font-family: var(--odesta-font-mono); }
+.odesta-font-display { font-family: var(--odesta-font-display); }
+
+/* Glassmorphism */
+.odesta-glass {
+    background: var(--odesta-bg-card);
+    backdrop-filter: var(--odesta-blur-lg);
+    -webkit-backdrop-filter: var(--odesta-blur-lg);
+    border: 1px solid var(--odesta-border);
+}
+
+/* Focus ring */
+.odesta-focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--odesta-bg-primary), 0 0 0 4px var(--odesta-accent-primary);
+}
+
+/* Scrollbar styling */
+.odesta-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.odesta-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.odesta-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--odesta-border);
+    border-radius: 3px;
+}
+
+.odesta-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--odesta-text-muted);
+}
+
+/* Gradient text */
+.odesta-gradient-text {
+    background: linear-gradient(135deg, var(--odesta-accent-primary) 0%, var(--odesta-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animations */
+.odesta-fade-in {
+    animation: odesta-fade-in 0.3s ease forwards;
+}
+
+@keyframes odesta-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.odesta-slide-up {
+    animation: odesta-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes odesta-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.odesta-slide-in-right {
+    animation: odesta-slide-in-right 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes odesta-slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

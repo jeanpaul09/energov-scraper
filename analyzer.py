@@ -2,16 +2,16 @@
 """
 Miami-Dade Property & Zoning Analyzer
 
-Combines:
-- EnerGov (confirmed working) → Zoning plans + PDF downloads
-- PropertyReach (when API endpoint confirmed) → Property data
-- Mapbox (optional) → Geocoding
+Integrates:
+- PropertyReach API → Property data (owner, value, parcel)
+- EnerGov → Zoning plans + PDF downloads  
+- PDF Extraction → Key data from documents
 
 Usage:
-    # By address (searches EnerGov)
-    python analyzer.py --address "24000 SW 124th Avenue, Miami, FL"
+    # By address
+    python analyzer.py --address "24000 SW 124th Ave" --city "Homestead" --state "FL"
     
-    # By EnerGov case ID (direct lookup)
+    # By EnerGov case ID
     python analyzer.py --case-id c75ba542-3e32-48f5-8f7b-418d3f8c1b6d
     
     # By plan number
@@ -31,12 +31,13 @@ import httpx
 from playwright.async_api import async_playwright
 
 # =============================================================================
-# Configuration - Add your API keys here
+# Configuration
 # =============================================================================
 
 CONFIG = {
     "propertyreach_key": "test_T9ktTlVrUgZuetmMperHBKm1i3P4jeSFamr",
-    "mapbox_token": None,  # Add your Mapbox token
+    "propertyreach_base": "https://api.propertyreach.com/v1",
+    "mapbox_token": None,
     "output_dir": Path("./analysis"),
 }
 
@@ -48,6 +49,30 @@ CONFIG["output_dir"].mkdir(exist_ok=True)
 # =============================================================================
 
 @dataclass
+class PropertyData:
+    """Property data from PropertyReach API."""
+    address: Optional[str] = None
+    city: Optional[str] = None
+    state: Optional[str] = None
+    zip_code: Optional[str] = None
+    apn: Optional[str] = None
+    owner: Optional[str] = None
+    owner_type: Optional[str] = None
+    property_type: Optional[str] = None
+    bedrooms: Optional[int] = None
+    bathrooms: Optional[float] = None
+    sqft: Optional[int] = None
+    lot_size: Optional[int] = None
+    year_built: Optional[int] = None
+    assessed_value: Optional[float] = None
+    market_value: Optional[float] = None
+    last_sale_date: Optional[str] = None
+    last_sale_price: Optional[float] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+
+
+@dataclass  
 class PDFContent:
     """Extracted PDF content."""
     filename: str
@@ -58,17 +83,108 @@ class PDFContent:
 
 
 @dataclass
-class ZoningAnalysis:
-    """Complete zoning analysis result."""
-    case_id: str
-    plan_number: Optional[str]
-    address: Optional[str]
-    status: Optional[str]
-    attachments: list
-    downloaded_files: list
-    extracted_data: list[PDFContent]
-    summary: dict
+class AnalysisResult:
+    """Complete analysis result."""
+    query: str
+    case_id: Optional[str] = None
+    plan_number: Optional[str] = None
+    property_data: Optional[PropertyData] = None
+    attachments: list = field(default_factory=list)
+    downloaded_files: list = field(default_factory=list)
+    extracted_data: list = field(default_factory=list)
+    summary: dict = field(default_factory=dict)
     timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
+
+
+# =============================================================================
+# PropertyReach API Client
+# =============================================================================
+
+class PropertyReachClient:
+    """PropertyReach API client."""
+    
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.base_url = CONFIG["propertyreach_base"]
+    
+    async def get_property(
+        self,
+        address: str = None,
+        city: str = None,
+        state: str = None,
+        zip_code: str = None,
+        apn: str = None,
+        county: str = None,
+    ) -> Optional[PropertyData]:
+        """
+        Get property details from PropertyReach.
+        
+        API: GET https://api.propertyreach.com/v1/property
+        Auth: x-api-key header
+        """
+        params = {}
+        if address:
+            params["address"] = address
+        if city:
+            params["city"] = city
+        if state:
+            params["state"] = state
+        if zip_code:
+            params["zip"] = zip_code
+        if apn:
+            params["apn"] = apn
+        if county:
+            params["county"] = county
+        
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            try:
+                resp = await client.get(
+                    f"{self.base_url}/property",
+                    params=params,
+                    headers={
+                        "x-api-key": self.api_key,
+                        "Accept": "application/json",
+                    }
+                )
+                
+                data = resp.json()
+                meta = data.get("meta", {})
+                
+                if meta.get("status") == 404:
+                    print(f"   ⚠️ PropertyReach: {meta.get('message', 'Not found')}")
+                    return None
+                
+                if data.get("data"):
+                    return self._parse_response(data["data"])
+                    
+            except Exception as e:
+                print(f"   ⚠️ PropertyReach error: {e}")
+        
+        return None
+    
+    def _parse_response(self, data: dict) -> PropertyData:
+        """Parse API response into PropertyData."""
+        return PropertyData(
+            address=data.get("address", {}).get("full") or data.get("address"),
+            city=data.get("address", {}).get("city") or data.get("city"),
+            state=data.get("address", {}).get("state") or data.get("state"),
+            zip_code=data.get("address", {}).get("zip") or data.get("zip"),
+            apn=data.get("apn") or data.get("parcelNumber"),
+            owner=data.get("owner", {}).get("name") or data.get("ownerName"),
+            owner_type=data.get("owner", {}).get("type"),
+            property_type=data.get("propertyType"),
+            bedrooms=data.get("bedrooms"),
+            bathrooms=data.get("bathrooms"),
+            sqft=data.get("sqft") or data.get("livingArea"),
+            lot_size=data.get("lotSize"),
+            year_built=data.get("yearBuilt"),
+            assessed_value=data.get("assessedValue"),
+            market_value=data.get("marketValue") or data.get("estimatedValue"),
+            last_sale_date=data.get("lastSaleDate"),
+            last_sale_price=data.get("lastSalePrice"),
+            latitude=data.get("latitude") or data.get("location", {}).get("lat"),
+            longitude=data.get("longitude") or data.get("location", {}).get("lng"),
+        )
 
 
 # =============================================================================
@@ -86,27 +202,23 @@ def extract_pdf_content(pdf_path: Path) -> PDFContent:
             page_count = len(pdf.pages)
             
             for page in pdf.pages:
-                # Extract text
                 text = page.extract_text() or ""
                 text_content.append(text)
                 
-                # Extract tables
                 page_tables = page.extract_tables()
                 if page_tables:
                     tables.extend(page_tables)
     except Exception as e:
-        text_content.append(f"[Error extracting PDF: {e}]")
+        text_content.append(f"[Error: {e}]")
     
     full_text = "\n".join(text_content)
-    
-    # Extract key data using patterns
     key_data = extract_key_data(full_text)
     
     return PDFContent(
         filename=pdf_path.name,
-        text=full_text[:5000],  # Limit for summary
+        text=full_text[:5000],
         page_count=page_count,
-        tables=tables[:5],  # Limit tables
+        tables=tables[:5],
         key_data=key_data,
     )
 
@@ -140,7 +252,7 @@ def extract_key_data(text: str) -> dict:
 # =============================================================================
 
 async def fetch_and_download(case_id: str, output_dir: Path) -> tuple[list, list]:
-    """Fetch attachments and download PDFs."""
+    """Fetch attachments and download PDFs from EnerGov."""
     
     plan_dir = output_dir / case_id
     plan_dir.mkdir(parents=True, exist_ok=True)
@@ -153,7 +265,6 @@ async def fetch_and_download(case_id: str, output_dir: Path) -> tuple[list, list
         context = await browser.new_context(accept_downloads=True)
         page = await context.new_page()
         
-        # Capture attachments from API
         async def handle_response(response):
             nonlocal attachments
             if "entityattachments" in response.url and response.status == 200:
@@ -217,70 +328,78 @@ async def analyze(
     case_id: str = None,
     plan_number: str = None,
     address: str = None,
+    city: str = None,
+    state: str = None,
+    zip_code: str = None,
     download_pdfs: bool = True,
     extract_content: bool = True,
-) -> ZoningAnalysis:
+) -> AnalysisResult:
     """
-    Analyze a zoning plan.
-    
-    Args:
-        case_id: EnerGov case ID (UUID)
-        plan_number: Plan number (e.g., Z2024000202)
-        address: Property address to search
-        download_pdfs: Download PDF attachments
-        extract_content: Extract text from PDFs
+    Comprehensive property and zoning analysis.
     """
     output_dir = CONFIG["output_dir"]
+    query = address or plan_number or case_id or "unknown"
     
     print(f"\n{'='*60}")
-    print(f"🔍 Zoning Analysis")
+    print(f"🔍 Property & Zoning Analysis")
+    print(f"   Query: {query}")
     print(f"{'='*60}")
     
-    # Resolve case_id if not provided
-    if not case_id and (plan_number or address):
-        print(f"\n📋 Searching for: {plan_number or address}")
-        # For now, use a known case for demo
-        # In production, would search EnerGov
+    result = AnalysisResult(query=query)
+    
+    # Step 1: PropertyReach lookup
+    if address:
+        print(f"\n📊 Step 1: PropertyReach API...")
+        pr_client = PropertyReachClient(CONFIG["propertyreach_key"])
+        result.property_data = await pr_client.get_property(
+            address=address,
+            city=city,
+            state=state,
+            zip_code=zip_code,
+        )
+        
+        if result.property_data:
+            print(f"   ✓ Found property data")
+            if result.property_data.owner:
+                print(f"   ✓ Owner: {result.property_data.owner}")
+            if result.property_data.apn:
+                print(f"   ✓ APN: {result.property_data.apn}")
+    
+    # Step 2: Resolve case_id
+    if not case_id:
+        # Use known test case for demo
         case_id = "c75ba542-3e32-48f5-8f7b-418d3f8c1b6d"
         plan_number = "Z2024000202"
-        address = "24000 SW 124TH AVE"
     
-    print(f"\n📊 Case ID: {case_id}")
+    result.case_id = case_id
+    result.plan_number = plan_number
     
-    # Fetch and download
-    attachments = []
-    downloaded = []
+    print(f"\n📋 Step 2: EnerGov Lookup")
+    print(f"   Case ID: {case_id}")
     
+    # Step 3: Download PDFs
     if download_pdfs:
-        print(f"\n⬇️  Downloading PDFs...")
+        print(f"\n⬇️  Step 3: Downloading PDFs...")
         attachments, downloaded = await fetch_and_download(case_id, output_dir)
+        result.attachments = [a.get("FileName") for a in attachments]
+        result.downloaded_files = downloaded
         print(f"   ✓ Downloaded {len(downloaded)} files")
     
-    # Extract content
-    extracted = []
-    if extract_content and downloaded:
-        print(f"\n📄 Extracting PDF content...")
-        for pdf_path in downloaded:
-            if pdf_path.endswith('.pdf'):
+    # Step 4: Extract content
+    if extract_content and result.downloaded_files:
+        print(f"\n📄 Step 4: Extracting PDF content...")
+        for pdf_path in result.downloaded_files:
+            if pdf_path.endswith('.pdf') or pdf_path.endswith('.PDF'):
                 content = extract_pdf_content(Path(pdf_path))
-                extracted.append(content)
+                result.extracted_data.append(content)
                 if content.key_data:
-                    print(f"   ✓ {content.filename}: {len(content.key_data)} data points")
+                    print(f"   ✓ {content.filename[:40]}: {len(content.key_data)} data points")
     
-    # Build summary
-    summary = build_summary(extracted)
-    
-    # Create result
-    result = ZoningAnalysis(
-        case_id=case_id,
-        plan_number=plan_number,
-        address=address,
-        status="Analyzed",
-        attachments=[a.get("FileName") for a in attachments],
-        downloaded_files=downloaded,
-        extracted_data=extracted,
-        summary=summary,
-    )
+    # Step 5: Build summary
+    for content in result.extracted_data:
+        for key, value in content.key_data.items():
+            if key not in result.summary:
+                result.summary[key] = value
     
     # Save result
     output_file = output_dir / f"{plan_number or case_id}_analysis.json"
@@ -288,49 +407,51 @@ async def analyze(
     
     print(f"\n{'='*60}")
     print(f"✅ Analysis Complete")
-    print(f"   📁 Files: {len(downloaded)}")
-    print(f"   📊 Data points: {len(summary)}")
+    print(f"   📁 PDFs: {len(result.downloaded_files)}")
+    print(f"   📊 Data points: {len(result.summary)}")
     print(f"   💾 Saved: {output_file}")
-    print(f"{'='*60}\n")
+    print(f"{'='*60}")
+    
+    # Print summary
+    if result.summary:
+        print(f"\n📊 Extracted Summary:")
+        for key, value in result.summary.items():
+            print(f"   • {key}: {value}")
     
     return result
 
 
-def build_summary(extracted: list[PDFContent]) -> dict:
-    """Build summary from all extracted data."""
-    summary = {}
-    
-    for content in extracted:
-        for key, value in content.key_data.items():
-            if key not in summary:
-                summary[key] = value
-    
-    return summary
-
-
-def save_analysis(result: ZoningAnalysis, path: Path):
+def save_analysis(result: AnalysisResult, path: Path):
     """Save analysis to JSON."""
     data = {
+        "query": result.query,
         "case_id": result.case_id,
         "plan_number": result.plan_number,
-        "address": result.address,
-        "status": result.status,
         "timestamp": result.timestamp,
+        "property_data": None,
         "attachments_count": len(result.attachments),
         "downloaded_count": len(result.downloaded_files),
         "summary": result.summary,
         "attachments": result.attachments,
-        "downloaded_files": result.downloaded_files,
         "extracted_data": [
             {
                 "filename": e.filename,
                 "page_count": e.page_count,
                 "key_data": e.key_data,
-                "text_preview": e.text[:500] if e.text else "",
             }
             for e in result.extracted_data
         ],
     }
+    
+    if result.property_data:
+        data["property_data"] = {
+            "address": result.property_data.address,
+            "city": result.property_data.city,
+            "state": result.property_data.state,
+            "owner": result.property_data.owner,
+            "apn": result.property_data.apn,
+            "market_value": result.property_data.market_value,
+        }
     
     with open(path, 'w') as f:
         json.dump(data, f, indent=2, default=str)
@@ -343,30 +464,29 @@ def save_analysis(result: ZoningAnalysis, path: Path):
 async def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description="Miami-Dade Zoning Analyzer")
+    parser = argparse.ArgumentParser(description="Property & Zoning Analyzer")
     parser.add_argument("--case-id", "-c", help="EnerGov case ID")
     parser.add_argument("--plan", "-p", help="Plan number (e.g., Z2024000202)")
     parser.add_argument("--address", "-a", help="Property address")
-    parser.add_argument("--no-download", action="store_true", help="Skip PDF download")
-    parser.add_argument("--no-extract", action="store_true", help="Skip content extraction")
+    parser.add_argument("--city", help="City name")
+    parser.add_argument("--state", default="FL", help="State (default: FL)")
+    parser.add_argument("--zip", help="ZIP code")
+    parser.add_argument("--no-download", action="store_true")
+    parser.add_argument("--no-extract", action="store_true")
     
     args = parser.parse_args()
     
-    result = await analyze(
+    await analyze(
         case_id=args.case_id,
         plan_number=args.plan,
         address=args.address,
+        city=args.city,
+        state=args.state,
+        zip_code=args.zip,
         download_pdfs=not args.no_download,
         extract_content=not args.no_extract,
     )
-    
-    # Print summary
-    if result.summary:
-        print("\n📊 Extracted Summary:")
-        for key, value in result.summary.items():
-            print(f"   • {key}: {value}")
 
 
 if __name__ == "__main__":
     asyncio.run(main())
-

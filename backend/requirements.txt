@@ -1,0 +1,17 @@
+# CDV Backend Dependencies
+# State-of-the-art Python stack
+
+# Web Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+
+# HTTP Client
+httpx>=0.26.0
+
+# Async support
+anyio>=4.2.0
+
+# Development
+python-dotenv>=1.0.0
+

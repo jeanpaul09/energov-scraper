@@ -9,28 +9,18 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
     
+    <!-- Odesta Design System -->
+    <link rel="stylesheet" href="odesta-design-system.css">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-tertiary: #1a1a26;
-            --bg-card: rgba(18, 18, 26, 0.85);
-            --accent-primary: #00d4aa;
-            --accent-secondary: #00b894;
-            --accent-glow: rgba(0, 212, 170, 0.3);
-            --accent-orange: #ff6b35;
-            --accent-blue: #4ecdc4;
-            --text-primary: #f0f0f5;
-            --text-secondary: #9090a0;
-            --text-muted: #606070;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-glow: rgba(0, 212, 170, 0.5);
-        }
+        /* ═══════════════════════════════════════════════════════════════════
+           CDV MAP - Odesta Theme Application
+           ═══════════════════════════════════════════════════════════════════ */
 
         * {
             margin: 0;
@@ -39,9 +29,9 @@
         }
 
         body {
-            font-family: 'Outfit', -apple-system, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: var(--odesta-font-ui);
+            background: var(--odesta-bg-primary);
+            color: var(--odesta-text-primary);
             overflow: hidden;
             height: 100vh;
         }
@@ -55,7 +45,7 @@
             height: 100%;
         }
 
-        /* Gradient Overlay at top */
+        /* Gradient Overlay */
         .gradient-overlay {
             position: fixed;
             top: 0;
@@ -67,7 +57,7 @@
                 rgba(10, 10, 15, 0.5) 50%,
                 transparent 100%);
             pointer-events: none;
-            z-index: 10;
+            z-index: var(--odesta-z-above);
         }
 
         /* Header */
@@ -76,8 +66,8 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 100;
-            padding: 20px 32px;
+            z-index: var(--odesta-z-sticky);
+            padding: var(--odesta-space-xl) var(--odesta-space-3xl);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -86,93 +76,94 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: var(--odesta-space-md);
         }
 
         .logo-icon {
             width: 42px;
             height: 42px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-blue) 100%);
-            border-radius: 10px;
+            background: linear-gradient(135deg, var(--odesta-accent-primary) 0%, var(--odesta-blue) 100%);
+            border-radius: var(--odesta-radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            color: var(--bg-primary);
-            box-shadow: 0 4px 20px var(--accent-glow);
+            font-weight: var(--odesta-font-bold);
+            font-size: var(--odesta-text-lg);
+            color: var(--odesta-bg-primary);
+            box-shadow: var(--odesta-shadow-glow);
         }
 
         .logo-text {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: var(--odesta-text-xl);
+            font-weight: var(--odesta-font-semibold);
             letter-spacing: 1px;
         }
 
         .logo-subtitle {
-            font-size: 11px;
-            color: var(--text-secondary);
+            font-size: var(--odesta-text-xs);
+            color: var(--odesta-text-secondary);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: var(--odesta-tracking-widest);
             margin-top: 2px;
         }
 
         /* Search Bar */
         .search-container {
             position: fixed;
-            top: 20px;
+            top: var(--odesta-space-xl);
             left: 50%;
             transform: translateX(-50%);
-            z-index: 100;
-            width: 480px;
+            z-index: var(--odesta-z-sticky);
+            width: 520px;
         }
 
         .search-bar {
             width: 100%;
-            padding: 16px 24px;
+            padding: var(--odesta-space-lg) var(--odesta-space-2xl);
             padding-left: 52px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            color: var(--text-primary);
-            font-family: 'Outfit', sans-serif;
-            font-size: 15px;
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-xl);
+            color: var(--odesta-text-primary);
+            font-family: var(--odesta-font-ui);
+            font-size: var(--odesta-text-md);
             outline: none;
-            transition: all 0.3s ease;
+            transition: var(--odesta-transition-base);
         }
 
         .search-bar::placeholder {
-            color: var(--text-muted);
+            color: var(--odesta-text-muted);
         }
 
         .search-bar:focus {
-            border-color: var(--border-glow);
-            box-shadow: 0 0 30px var(--accent-glow);
+            border-color: var(--odesta-border-glow);
+            box-shadow: var(--odesta-shadow-glow);
         }
 
         .search-icon {
             position: absolute;
-            left: 20px;
+            left: var(--odesta-space-xl);
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-secondary);
-            font-size: 18px;
+            color: var(--odesta-text-secondary);
+            font-size: var(--odesta-text-lg);
         }
 
-        /* Search Results Dropdown */
+        /* Search Results */
         .search-results {
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
-            margin-top: 8px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
+            margin-top: var(--odesta-space-sm);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-lg);
             overflow: hidden;
             display: none;
+            animation: odesta-slide-up 0.2s ease;
         }
 
         .search-results.visible {
@@ -180,10 +171,10 @@
         }
 
         .search-result-item {
-            padding: 12px 20px;
+            padding: var(--odesta-space-md) var(--odesta-space-xl);
             cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
-            transition: background 0.2s;
+            border-bottom: 1px solid var(--odesta-border);
+            transition: var(--odesta-transition-fast);
         }
 
         .search-result-item:last-child {
@@ -191,66 +182,66 @@
         }
 
         .search-result-item:hover {
-            background: var(--bg-tertiary);
+            background: var(--odesta-bg-tertiary);
         }
 
         .search-result-address {
-            font-size: 14px;
-            font-weight: 500;
+            font-size: var(--odesta-text-base);
+            font-weight: var(--odesta-font-medium);
         }
 
         .search-result-detail {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 4px;
+            font-size: var(--odesta-text-sm);
+            color: var(--odesta-text-secondary);
+            margin-top: var(--odesta-space-xs);
         }
 
         /* Controls */
         .controls {
             display: flex;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
         }
 
         .control-btn {
-            padding: 12px 16px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            color: var(--text-primary);
+            padding: var(--odesta-space-md) var(--odesta-space-lg);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-md);
+            color: var(--odesta-text-primary);
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            transition: all 0.2s ease;
+            font-family: var(--odesta-font-ui);
+            font-size: var(--odesta-text-base);
+            transition: var(--odesta-transition-base);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
         }
 
         .control-btn:hover {
-            background: var(--bg-tertiary);
-            border-color: var(--accent-primary);
+            background: var(--odesta-bg-tertiary);
+            border-color: var(--odesta-accent-primary);
         }
 
         .control-btn.active {
-            background: var(--accent-primary);
-            color: var(--bg-primary);
-            border-color: var(--accent-primary);
+            background: var(--odesta-accent-primary);
+            color: var(--odesta-bg-primary);
+            border-color: var(--odesta-accent-primary);
         }
 
         /* Parcel Info Panel */
         .parcel-panel {
             position: fixed;
-            right: 24px;
+            right: var(--odesta-space-2xl);
             top: 100px;
-            width: 380px;
-            background: var(--bg-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            z-index: 100;
+            width: 400px;
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-xl);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-xl);
+            z-index: var(--odesta-z-sticky);
             transform: translateX(calc(100% + 24px));
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: var(--odesta-transition-spring);
             overflow: hidden;
         }
 
@@ -259,55 +250,55 @@
         }
 
         .panel-header {
-            padding: 24px;
-            border-bottom: 1px solid var(--border-color);
+            padding: var(--odesta-space-2xl);
+            border-bottom: 1px solid var(--odesta-border);
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
 
         .panel-title {
-            font-size: 13px;
+            font-size: var(--odesta-text-xs);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
+            letter-spacing: var(--odesta-tracking-widest);
+            color: var(--odesta-text-secondary);
+            margin-bottom: var(--odesta-space-sm);
         }
 
         .panel-address {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.4;
+            font-size: var(--odesta-text-lg);
+            font-weight: var(--odesta-font-semibold);
+            line-height: var(--odesta-leading-snug);
         }
 
         .panel-close {
             width: 32px;
             height: 32px;
-            background: var(--bg-tertiary);
+            background: var(--odesta-bg-tertiary);
             border: none;
-            border-radius: 8px;
-            color: var(--text-secondary);
+            border-radius: var(--odesta-radius-sm);
+            color: var(--odesta-text-secondary);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            transition: all 0.2s;
+            font-size: var(--odesta-text-lg);
+            transition: var(--odesta-transition-base);
         }
 
         .panel-close:hover {
-            background: var(--accent-orange);
+            background: var(--odesta-orange);
             color: white;
         }
 
         .panel-content {
-            padding: 24px;
+            padding: var(--odesta-space-2xl);
             max-height: calc(100vh - 280px);
             overflow-y: auto;
         }
 
         .info-section {
-            margin-bottom: 24px;
+            margin-bottom: var(--odesta-space-2xl);
         }
 
         .info-section:last-child {
@@ -315,55 +306,55 @@
         }
 
         .section-label {
-            font-size: 11px;
+            font-size: var(--odesta-text-xs);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
+            letter-spacing: var(--odesta-tracking-wider);
+            color: var(--odesta-text-muted);
+            margin-bottom: var(--odesta-space-md);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
         }
 
         .section-label::before {
             content: '';
             width: 4px;
             height: 4px;
-            background: var(--accent-primary);
+            background: var(--odesta-accent-primary);
             border-radius: 50%;
         }
 
         .dimension-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: var(--odesta-space-md);
         }
 
         .dimension-item {
-            background: var(--bg-tertiary);
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            background: var(--odesta-bg-tertiary);
+            padding: var(--odesta-space-lg);
+            border-radius: var(--odesta-radius-md);
+            border: 1px solid var(--odesta-border);
         }
 
         .dimension-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--accent-primary);
-            margin-bottom: 4px;
+            font-family: var(--odesta-font-mono);
+            font-size: var(--odesta-text-2xl);
+            font-weight: var(--odesta-font-semibold);
+            color: var(--odesta-accent-primary);
+            margin-bottom: var(--odesta-space-xs);
         }
 
         .dimension-label {
-            font-size: 12px;
-            color: var(--text-secondary);
+            font-size: var(--odesta-text-sm);
+            color: var(--odesta-text-secondary);
         }
 
         .info-row {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: var(--odesta-space-md) 0;
+            border-bottom: 1px solid var(--odesta-border);
         }
 
         .info-row:last-child {
@@ -371,14 +362,14 @@
         }
 
         .info-label {
-            color: var(--text-secondary);
-            font-size: 14px;
+            color: var(--odesta-text-secondary);
+            font-size: var(--odesta-text-base);
         }
 
         .info-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 14px;
-            color: var(--text-primary);
+            font-family: var(--odesta-font-mono);
+            font-size: var(--odesta-text-base);
+            color: var(--odesta-text-primary);
         }
 
         .status-badge {
@@ -386,19 +377,19 @@
             align-items: center;
             gap: 6px;
             padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
+            border-radius: var(--odesta-radius-full);
+            font-size: var(--odesta-text-sm);
+            font-weight: var(--odesta-font-medium);
         }
 
         .status-badge.active {
-            background: rgba(0, 212, 170, 0.15);
-            color: var(--accent-primary);
+            background: var(--odesta-accent-subtle);
+            color: var(--odesta-accent-primary);
         }
 
         .status-badge.pending {
             background: rgba(255, 107, 53, 0.15);
-            color: var(--accent-orange);
+            color: var(--odesta-orange);
         }
 
         .status-badge::before {
@@ -409,145 +400,145 @@
             background: currentColor;
         }
 
-        /* Action Buttons */
+        /* Panel Actions */
         .panel-actions {
-            padding: 20px 24px;
-            border-top: 1px solid var(--border-color);
+            padding: var(--odesta-space-xl) var(--odesta-space-2xl);
+            border-top: 1px solid var(--odesta-border);
             display: flex;
-            gap: 12px;
+            gap: var(--odesta-space-md);
         }
 
         .action-btn {
             flex: 1;
-            padding: 14px 20px;
+            padding: var(--odesta-space-md) var(--odesta-space-xl);
             border: none;
-            border-radius: 12px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
+            border-radius: var(--odesta-radius-md);
+            font-family: var(--odesta-font-ui);
+            font-size: var(--odesta-text-base);
+            font-weight: var(--odesta-font-medium);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: var(--odesta-transition-base);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
         }
 
         .action-btn.primary {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            color: var(--bg-primary);
+            background: linear-gradient(135deg, var(--odesta-accent-primary) 0%, var(--odesta-accent-secondary) 100%);
+            color: var(--odesta-bg-primary);
         }
 
         .action-btn.primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px var(--accent-glow);
+            box-shadow: var(--odesta-shadow-glow);
         }
 
         .action-btn.secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
+            background: var(--odesta-bg-tertiary);
+            color: var(--odesta-text-primary);
+            border: 1px solid var(--odesta-border);
         }
 
         .action-btn.secondary:hover {
-            border-color: var(--accent-primary);
+            border-color: var(--odesta-accent-primary);
         }
 
         /* Map Tools */
         .map-tools {
             position: fixed;
-            left: 24px;
+            left: var(--odesta-space-2xl);
             top: 50%;
             transform: translateY(-50%);
-            z-index: 100;
+            z-index: var(--odesta-z-sticky);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
         }
 
         .map-tool {
             width: 48px;
             height: 48px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            color: var(--text-secondary);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-lg);
+            color: var(--odesta-text-secondary);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            transition: all 0.2s;
+            font-size: var(--odesta-text-xl);
+            transition: var(--odesta-transition-base);
         }
 
         .map-tool:hover {
-            color: var(--text-primary);
-            background: var(--bg-tertiary);
-            border-color: var(--accent-primary);
+            color: var(--odesta-text-primary);
+            background: var(--odesta-bg-tertiary);
+            border-color: var(--odesta-accent-primary);
         }
 
         .map-tool.active {
-            background: var(--accent-primary);
-            color: var(--bg-primary);
-            border-color: var(--accent-primary);
+            background: var(--odesta-accent-primary);
+            color: var(--odesta-bg-primary);
+            border-color: var(--odesta-accent-primary);
         }
 
         /* Layer Toggle */
         .layer-toggle {
             position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 100;
+            bottom: var(--odesta-space-2xl);
+            left: var(--odesta-space-2xl);
+            z-index: var(--odesta-z-sticky);
             display: flex;
-            gap: 8px;
+            gap: var(--odesta-space-sm);
             flex-wrap: wrap;
-            max-width: 400px;
+            max-width: 420px;
         }
 
         .layer-btn {
-            padding: 10px 16px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: var(--text-secondary);
+            padding: var(--odesta-space-md) var(--odesta-space-lg);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-md);
+            color: var(--odesta-text-secondary);
             cursor: pointer;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            transition: all 0.2s;
+            font-family: var(--odesta-font-mono);
+            font-size: var(--odesta-text-sm);
+            transition: var(--odesta-transition-base);
         }
 
         .layer-btn:hover, .layer-btn.active {
-            color: var(--text-primary);
-            border-color: var(--accent-primary);
+            color: var(--odesta-text-primary);
+            border-color: var(--odesta-accent-primary);
         }
 
         .layer-btn.active {
-            background: var(--accent-primary);
-            color: var(--bg-primary);
+            background: var(--odesta-accent-primary);
+            color: var(--odesta-bg-primary);
         }
 
         .layer-btn.esri {
-            border-color: #4a90d9;
+            border-color: var(--odesta-blue);
         }
 
         .layer-btn.esri.active {
-            background: #4a90d9;
+            background: var(--odesta-blue);
         }
 
         /* Imagery Badge */
         .imagery-badge {
             position: fixed;
             bottom: 70px;
-            left: 24px;
-            z-index: 100;
-            padding: 8px 14px;
-            background: rgba(74, 144, 217, 0.2);
-            border: 1px solid #4a90d9;
-            border-radius: 8px;
-            font-size: 11px;
-            color: #4a90d9;
+            left: var(--odesta-space-2xl);
+            z-index: var(--odesta-z-sticky);
+            padding: var(--odesta-space-sm) var(--odesta-space-md);
+            background: rgba(78, 205, 196, 0.15);
+            border: 1px solid var(--odesta-blue);
+            border-radius: var(--odesta-radius-sm);
+            font-size: var(--odesta-text-xs);
+            color: var(--odesta-blue);
             display: none;
         }
 
@@ -558,33 +549,60 @@
         /* Coordinates Display */
         .coords-display {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 100;
-            padding: 12px 16px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--text-secondary);
+            bottom: var(--odesta-space-2xl);
+            right: var(--odesta-space-2xl);
+            z-index: var(--odesta-z-sticky);
+            padding: var(--odesta-space-md) var(--odesta-space-lg);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-md);
+            font-family: var(--odesta-font-mono);
+            font-size: var(--odesta-text-sm);
+            color: var(--odesta-text-secondary);
         }
 
-        /* Loading State */
+        /* API Status */
+        .api-status {
+            position: fixed;
+            top: 80px;
+            right: var(--odesta-space-3xl);
+            z-index: var(--odesta-z-sticky);
+            display: flex;
+            align-items: center;
+            gap: var(--odesta-space-sm);
+            padding: var(--odesta-space-sm) var(--odesta-space-md);
+            background: var(--odesta-bg-card);
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-full);
+            font-size: var(--odesta-text-xs);
+            color: var(--odesta-text-secondary);
+        }
+
+        .api-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--odesta-orange);
+        }
+
+        .api-status-dot.connected {
+            background: var(--odesta-accent-primary);
+            animation: odesta-pulse 2s infinite;
+        }
+
+        /* Loading */
         .loading-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg-primary);
+            inset: 0;
+            background: var(--odesta-bg-primary);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: 24px;
+            gap: var(--odesta-space-2xl);
             transition: opacity 0.5s ease;
         }
 
@@ -596,114 +614,63 @@
         .loader {
             width: 60px;
             height: 60px;
-            border: 3px solid var(--border-color);
-            border-top-color: var(--accent-primary);
+            border: 3px solid var(--odesta-border);
+            border-top-color: var(--odesta-accent-primary);
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+            animation: odesta-spin 1s linear infinite;
         }
 
         .loading-text {
-            font-size: 14px;
-            color: var(--text-secondary);
-            letter-spacing: 2px;
+            font-size: var(--odesta-text-base);
+            color: var(--odesta-text-secondary);
+            letter-spacing: var(--odesta-tracking-widest);
             text-transform: uppercase;
         }
 
-        /* API Status Indicator */
-        .api-status {
-            position: fixed;
-            top: 80px;
-            right: 32px;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 11px;
-            color: var(--text-secondary);
-        }
-
-        .api-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent-orange);
-        }
-
-        .api-status-dot.connected {
-            background: var(--accent-primary);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Popup Styling */
+        /* Mapbox Overrides */
         .mapboxgl-popup-content {
-            background: var(--bg-card) !important;
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 12px !important;
-            padding: 16px !important;
-            color: var(--text-primary);
-            font-family: 'Outfit', sans-serif;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+            background: var(--odesta-bg-card) !important;
+            backdrop-filter: var(--odesta-blur-lg);
+            border: 1px solid var(--odesta-border);
+            border-radius: var(--odesta-radius-md) !important;
+            padding: var(--odesta-space-lg) !important;
+            color: var(--odesta-text-primary);
+            font-family: var(--odesta-font-ui);
+            box-shadow: var(--odesta-shadow-lg) !important;
         }
 
         .mapboxgl-popup-tip {
-            border-top-color: var(--bg-card) !important;
+            border-top-color: var(--odesta-bg-card) !important;
         }
 
-        .popup-title {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .popup-info {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--border-color);
-            border-radius: 3px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--text-muted);
-        }
-
-        /* Attribution */
         .mapboxgl-ctrl-attrib {
-            background: var(--bg-card) !important;
-            backdrop-filter: blur(10px);
-            border-radius: 6px !important;
+            background: var(--odesta-bg-card) !important;
+            backdrop-filter: var(--odesta-blur-sm);
+            border-radius: var(--odesta-radius-sm) !important;
             padding: 4px 8px !important;
             font-size: 10px !important;
         }
 
         .mapboxgl-ctrl-attrib a {
-            color: var(--text-secondary) !important;
+            color: var(--odesta-text-secondary) !important;
+        }
+
+        /* Scrollbar - using Odesta classes */
+        .panel-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .panel-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .panel-content::-webkit-scrollbar-thumb {
+            background: var(--odesta-border);
+            border-radius: 3px;
+        }
+
+        .panel-content::-webkit-scrollbar-thumb:hover {
+            background: var(--odesta-text-muted);
         }
     </style>
 </head>
@@ -742,7 +709,7 @@
     <!-- API Status -->
     <div class="api-status">
         <div class="api-status-dot" id="apiStatusDot"></div>
-        <span id="apiStatusText">PropertyReach API</span>
+        <span id="apiStatusText">Connecting...</span>
     </div>
 
     <!-- Search -->
@@ -874,25 +841,55 @@
         </div>
         <div class="panel-actions">
             <button class="action-btn secondary" id="viewReportsBtn">📄 Reports</button>
-            <button class="action-btn primary" id="downloadDataBtn">⬇️ Download Data</button>
+            <button class="action-btn primary" id="downloadDataBtn">⬇️ Download</button>
         </div>
     </div>
 
     <script>
         // ============================================
-        // API CONFIGURATION
+        // CONFIGURATION
         // ============================================
         const CONFIG = {
             mapbox: {
                 accessToken: 'pk.eyJ1IjoiamVhbnBhdWwwOSIsImEiOiJjbWpqMWdmNmMxdjVvM2VxMzM5Nm92bmg3In0.2UPggL-HJqybJ3gk0smJAw'
             },
-            propertyReach: {
-                apiKey: 'test_T9ktTlVrUgZuetmMperHBKm1i3P4jeSFamr',
-                baseUrl: 'https://api.propertyreach.com/v1'
+            api: {
+                baseUrl: 'http://localhost:8000/api'  // FastAPI backend
             }
         };
 
         mapboxgl.accessToken = CONFIG.mapbox.accessToken;
+
+        // ============================================
+        // API CLIENT
+        // ============================================
+        const api = {
+            async getProperty(address, city = 'Miami', state = 'FL') {
+                const params = new URLSearchParams({ address, city, state });
+                const response = await fetch(`${CONFIG.api.baseUrl}/property?${params}`);
+                return response.json();
+            },
+            
+            async autocomplete(query) {
+                const response = await fetch(`${CONFIG.api.baseUrl}/autocomplete?q=${encodeURIComponent(query)}`);
+                return response.json();
+            },
+            
+            async geocode(query) {
+                const response = await fetch(`${CONFIG.api.baseUrl}/geocode?q=${encodeURIComponent(query)}`);
+                return response.json();
+            },
+            
+            async reverseGeocode(lng, lat) {
+                const response = await fetch(`${CONFIG.api.baseUrl}/reverse-geocode?lng=${lng}&lat=${lat}`);
+                return response.json();
+            },
+            
+            async healthCheck() {
+                const response = await fetch('http://localhost:8000/health');
+                return response.json();
+            }
+        };
 
         // ============================================
         // MAP INITIALIZATION
@@ -900,49 +897,42 @@
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/dark-v11',
-            center: [-80.1918, 25.7617], // Miami
+            center: [-80.1918, 25.7617],
             zoom: 12,
             pitch: 0,
             bearing: 0,
             antialias: true
         });
 
-        // Map styles including ESRI (more recent imagery!)
         const mapStyles = {
             dark: 'mapbox://styles/mapbox/dark-v11',
             satellite: 'mapbox://styles/mapbox/satellite-streets-v12',
-            'esri-satellite': null, // Custom ESRI layer
+            'esri-satellite': null,
             streets: 'mapbox://styles/mapbox/streets-v12'
         };
 
-        // Track current style
         let currentStyle = 'dark';
         let esriLayerAdded = false;
 
         // ============================================
-        // ESRI WORLD IMAGERY (More recent satellite!)
+        // ESRI WORLD IMAGERY
         // ============================================
         function addEsriImagery() {
             if (map.getSource('esri-satellite')) return;
             
             map.addSource('esri-satellite', {
                 type: 'raster',
-                tiles: [
-                    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-                ],
+                tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
                 tileSize: 256,
                 attribution: 'ESRI World Imagery'
             });
             
-            // Add it below labels but above other layers
             const firstSymbolLayer = map.getStyle().layers.find(l => l.type === 'symbol');
             map.addLayer({
                 id: 'esri-satellite-layer',
                 type: 'raster',
                 source: 'esri-satellite',
-                paint: {
-                    'raster-opacity': 0
-                }
+                paint: { 'raster-opacity': 0 }
             }, firstSymbolLayer ? firstSymbolLayer.id : undefined);
             
             esriLayerAdded = true;
@@ -955,12 +945,11 @@
         }
 
         // ============================================
-        // MAP LOAD EVENT
+        // MAP LOAD
         // ============================================
         map.on('load', () => {
             document.getElementById('loading').classList.add('hidden');
             
-            // Add 3D buildings layer
             map.addLayer({
                 'id': '3d-buildings',
                 'source': 'composite',
@@ -976,10 +965,8 @@
                 }
             });
 
-            // Initialize ESRI layer (hidden by default)
             addEsriImagery();
 
-            // Parcel layer
             map.addSource('parcels', {
                 type: 'geojson',
                 data: { type: 'FeatureCollection', features: [] }
@@ -1006,7 +993,6 @@
                 }
             });
 
-            // Parcel click handler
             map.on('click', 'parcel-fills', (e) => {
                 const props = e.features[0].properties;
                 fetchPropertyDetails(props);
@@ -1020,111 +1006,83 @@
                 map.getCanvas().style.cursor = '';
             });
 
-            // Test PropertyReach API connection
-            testApiConnection();
-
-            console.log('🗺️ Map loaded successfully!');
-            console.log('🛰️ ESRI World Imagery available for recent satellite views');
+            checkApiConnection();
         });
 
         // ============================================
-        // PROPERTYREACH API INTEGRATION
+        // API CONNECTION CHECK
         // ============================================
-        async function testApiConnection() {
+        async function checkApiConnection() {
             const statusDot = document.getElementById('apiStatusDot');
             const statusText = document.getElementById('apiStatusText');
             
             try {
-                // Test with a sample address search
-                const response = await fetch(`${CONFIG.propertyReach.baseUrl}/property?streetAddress=100%20Biscayne%20Blvd&city=Miami&state=FL`, {
-                    headers: {
-                        'x-api-key': CONFIG.propertyReach.apiKey,
-                        'Content-Type': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
+                const health = await api.healthCheck();
+                if (health.status === 'healthy') {
                     statusDot.classList.add('connected');
-                    statusText.textContent = 'PropertyReach Connected';
-                    console.log('✅ PropertyReach API connected');
-                } else {
-                    throw new Error(`API returned ${response.status}`);
+                    statusText.textContent = 'API Connected';
+                    console.log('✅ Backend API connected');
                 }
             } catch (err) {
                 statusDot.classList.remove('connected');
                 statusText.textContent = 'API Offline';
-                console.log('⚠️ PropertyReach API:', err.message);
+                console.log('⚠️ Backend not running - using fallback mode');
             }
         }
 
-        async function fetchPropertyDetails(address, city = 'Miami', state = 'FL') {
+        // ============================================
+        // PROPERTY DATA
+        // ============================================
+        async function fetchPropertyDetails(addressOrProps) {
             const panel = document.getElementById('parcelPanel');
             panel.classList.add('visible');
-            
-            // Show loading state
             document.getElementById('parcelAddress').textContent = 'Loading...';
             
+            const address = typeof addressOrProps === 'object' ? addressOrProps.address : addressOrProps;
+            
             try {
-                const params = new URLSearchParams({
-                    streetAddress: typeof address === 'object' ? address.address : address,
-                    city: city,
-                    state: state
-                });
+                const response = await api.getProperty(address);
                 
-                const response = await fetch(`${CONFIG.propertyReach.baseUrl}/property?${params}`, {
-                    headers: {
-                        'x-api-key': CONFIG.propertyReach.apiKey,
-                        'Content-Type': 'application/json'
-                    }
-                });
-                
-                if (!response.ok) throw new Error('Property not found');
-                
-                const data = await response.json();
-                updatePanelWithPropertyData(data);
-                
+                if (response.success && response.data) {
+                    updatePanelWithPropertyData(response.data);
+                } else {
+                    throw new Error('No data returned');
+                }
             } catch (err) {
-                console.error('Property fetch error:', err);
-                // Show demo data as fallback
+                console.log('Using fallback data:', err.message);
                 showDemoPropertyData(address);
             }
         }
 
         function updatePanelWithPropertyData(data) {
-            const prop = data.property || data;
-            
-            // Address
-            document.getElementById('parcelAddress').textContent = 
-                `${prop.streetAddress || prop.address || 'Unknown'}, ${prop.city || 'Miami'}, ${prop.state || 'FL'} ${prop.zip || ''}`;
+            document.getElementById('parcelAddress').textContent = data.address || 'Unknown Address';
             
             // Dimensions
-            const sqft = prop.lotSquareFootage || prop.lotSize || prop.squareFootage;
-            document.getElementById('parcelArea').textContent = sqft ? sqft.toLocaleString() : '--';
-            document.getElementById('parcelAcres').textContent = sqft ? (sqft / 43560).toFixed(2) : '--';
-            document.getElementById('parcelWidth').textContent = prop.lotWidth || '--';
-            document.getElementById('parcelDepth').textContent = prop.lotDepth || '--';
+            const dims = data.dimensions || {};
+            document.getElementById('parcelArea').textContent = dims.lot_sqft ? dims.lot_sqft.toLocaleString() : '--';
+            document.getElementById('parcelAcres').textContent = dims.lot_acres ? dims.lot_acres.toFixed(2) : '--';
+            document.getElementById('parcelWidth').textContent = dims.lot_width || '--';
+            document.getElementById('parcelDepth').textContent = dims.lot_depth || '--';
             
-            // Property Info
-            document.getElementById('folioNumber').textContent = prop.apn || prop.parcelNumber || '--';
-            document.getElementById('zoning').textContent = prop.zoning || '--';
-            document.getElementById('landUse').textContent = prop.propertyType || prop.landUse || '--';
-            document.getElementById('yearBuilt').textContent = prop.yearBuilt || '--';
-            document.getElementById('bedrooms').textContent = prop.bedrooms || '--';
-            document.getElementById('bathrooms').textContent = prop.bathrooms || '--';
+            // Property info
+            document.getElementById('folioNumber').textContent = data.folio || data.apn || '--';
+            document.getElementById('zoning').textContent = data.zoning || '--';
+            document.getElementById('landUse').textContent = data.land_use || data.property_type || '--';
+            document.getElementById('yearBuilt').textContent = data.year_built || '--';
+            document.getElementById('bedrooms').textContent = data.bedrooms || '--';
+            document.getElementById('bathrooms').textContent = data.bathrooms || '--';
             
             // Valuation
-            document.getElementById('landValue').textContent = formatCurrency(prop.landValue);
-            document.getElementById('buildingValue').textContent = formatCurrency(prop.improvementValue || prop.buildingValue);
-            document.getElementById('totalValue').textContent = formatCurrency(prop.assessedValue || prop.totalValue);
-            document.getElementById('lastSalePrice').textContent = formatCurrency(prop.lastSalePrice);
-            document.getElementById('lastSaleDate').textContent = prop.lastSaleDate || '--';
+            document.getElementById('landValue').textContent = formatCurrency(data.land_value);
+            document.getElementById('buildingValue').textContent = formatCurrency(data.building_value);
+            document.getElementById('totalValue').textContent = formatCurrency(data.total_value);
+            document.getElementById('lastSalePrice').textContent = formatCurrency(data.last_sale_price);
+            document.getElementById('lastSaleDate').textContent = data.last_sale_date || '--';
         }
 
         function showDemoPropertyData(address) {
-            const addr = typeof address === 'object' ? address.address : address;
-            document.getElementById('parcelAddress').textContent = addr || 'Sample Property, Miami, FL';
+            document.getElementById('parcelAddress').textContent = address || 'Sample Property, Miami, FL';
             
-            // Generate realistic demo data
             const sqft = Math.floor(Math.random() * 15000) + 5000;
             document.getElementById('parcelArea').textContent = sqft.toLocaleString();
             document.getElementById('parcelAcres').textContent = (sqft / 43560).toFixed(2);
@@ -1157,7 +1115,7 @@
         }
 
         // ============================================
-        // SEARCH WITH AUTOCOMPLETE
+        // SEARCH
         // ============================================
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
@@ -1177,19 +1135,26 @@
 
         async function searchAddresses(query) {
             try {
-                // Try PropertyReach autocomplete first
-                const prResponse = await fetch(`${CONFIG.propertyReach.baseUrl}/autocomplete?query=${encodeURIComponent(query)}&state=FL`, {
-                    headers: { 'x-api-key': CONFIG.propertyReach.apiKey }
-                });
-                
                 let results = [];
                 
-                if (prResponse.ok) {
-                    const data = await prResponse.json();
-                    results = data.suggestions || data.results || [];
+                // Try backend autocomplete first
+                try {
+                    const acResponse = await api.autocomplete(query);
+                    if (acResponse.success && acResponse.data) {
+                        results = acResponse.data.suggestions || [];
+                    }
+                } catch (err) {
+                    // Fallback to Mapbox
+                    const geoResponse = await api.geocode(query);
+                    if (geoResponse.success && geoResponse.data) {
+                        results = geoResponse.data.results.map(r => ({
+                            address: r.place_name,
+                            center: r.center
+                        }));
+                    }
                 }
                 
-                // Fallback to Mapbox geocoding
+                // Final fallback - direct Mapbox
                 if (results.length === 0) {
                     const mbResponse = await fetch(
                         `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json?` +
@@ -1203,7 +1168,6 @@
                 }
                 
                 displaySearchResults(results);
-                
             } catch (err) {
                 console.error('Search error:', err);
             }
@@ -1224,22 +1188,19 @@
             
             searchResults.classList.add('visible');
             
-            // Add click handlers
             searchResults.querySelectorAll('.search-result-item').forEach((item, i) => {
                 item.addEventListener('click', () => {
                     const result = results[i];
                     searchResults.classList.remove('visible');
                     searchInput.value = result.address || result.streetAddress;
                     
-                    // Fly to location if we have coordinates
                     if (result.center) {
                         map.flyTo({ center: result.center, zoom: 18 });
                     } else if (result.latitude && result.longitude) {
                         map.flyTo({ center: [result.longitude, result.latitude], zoom: 18 });
                     }
                     
-                    // Fetch property details
-                    fetchPropertyDetails(result.address || result.streetAddress, result.city, result.state);
+                    fetchPropertyDetails(result.address || result.streetAddress);
                 });
             });
         }
@@ -1250,7 +1211,6 @@
                 searchResults.classList.remove('visible');
                 
                 if (query) {
-                    // Geocode and fly to
                     const response = await fetch(
                         `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json?` +
                         `proximity=-80.1918,25.7617&bbox=-80.87,25.14,-80.03,25.97&access_token=${CONFIG.mapbox.accessToken}`
@@ -1266,7 +1226,6 @@
             }
         });
 
-        // Close search results when clicking outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.search-container')) {
                 searchResults.classList.remove('visible');
@@ -1276,14 +1235,11 @@
         // ============================================
         // MAP CONTROLS
         // ============================================
-        
-        // Update coordinates on mouse move
         map.on('mousemove', (e) => {
             document.getElementById('lat').textContent = e.lngLat.lat.toFixed(6);
             document.getElementById('lng').textContent = e.lngLat.lng.toFixed(6);
         });
 
-        // Layer style toggle with ESRI support
         document.querySelectorAll('.layer-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const style = btn.dataset.style;
@@ -1293,18 +1249,14 @@
                 btn.classList.add('active');
                 
                 if (style === 'esri-satellite') {
-                    // Show ESRI layer on top of current base
                     showEsriImagery(true);
                 } else {
-                    // Hide ESRI and switch Mapbox style
                     showEsriImagery(false);
                     map.setStyle(mapStyles[style]);
                     
-                    // Re-add layers after style change
                     map.once('style.load', () => {
                         addEsriImagery();
                         
-                        // Re-add parcel layers
                         if (!map.getSource('parcels')) {
                             map.addSource('parcels', {
                                 type: 'geojson',
@@ -1330,11 +1282,9 @@
             });
         });
 
-        // Zoom controls
         document.getElementById('zoomIn').addEventListener('click', () => map.zoomIn());
         document.getElementById('zoomOut').addEventListener('click', () => map.zoomOut());
 
-        // Locate me
         document.getElementById('locateMe').addEventListener('click', () => {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(pos => {
@@ -1342,23 +1292,18 @@
                         center: [pos.coords.longitude, pos.coords.latitude],
                         zoom: 18
                     });
-                }, err => {
-                    console.error('Geolocation error:', err);
-                });
+                }, err => console.error('Geolocation error:', err));
             }
         });
 
-        // Panel controls
         document.getElementById('closePanel').addEventListener('click', () => {
             document.getElementById('parcelPanel').classList.remove('visible');
         });
 
-        // Click on map to fetch property at location
         map.on('click', async (e) => {
             const features = map.queryRenderedFeatures(e.point, { layers: ['parcel-fills'] });
             
             if (features.length === 0) {
-                // Reverse geocode and fetch property
                 const response = await fetch(
                     `https://api.mapbox.com/geocoding/v5/mapbox.places/${e.lngLat.lng},${e.lngLat.lat}.json?` +
                     `access_token=${CONFIG.mapbox.accessToken}`
@@ -1366,13 +1311,11 @@
                 const data = await response.json();
                 
                 if (data.features && data.features.length > 0) {
-                    const address = data.features[0].place_name;
-                    fetchPropertyDetails(address);
+                    fetchPropertyDetails(data.features[0].place_name);
                 }
             }
         });
 
-        // Download data button
         document.getElementById('downloadDataBtn').addEventListener('click', () => {
             const data = {
                 address: document.getElementById('parcelAddress').textContent,
@@ -1382,7 +1325,8 @@
                 landUse: document.getElementById('landUse').textContent,
                 yearBuilt: document.getElementById('yearBuilt').textContent,
                 totalValue: document.getElementById('totalValue').textContent,
-                exportedAt: new Date().toISOString()
+                exportedAt: new Date().toISOString(),
+                source: 'CDV Parcel Intelligence'
             };
             
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -1393,9 +1337,8 @@
             a.click();
         });
 
-        console.log('🏠 CDV Parcel Intelligence initialized');
-        console.log('🔑 PropertyReach API key configured');
-        console.log('🛰️ ESRI World Imagery available for recent satellite views');
+        console.log('%c CDV Parcel Intelligence ', 'background: #00d4aa; color: #0a0a0f; padding: 8px 16px; font-weight: bold; border-radius: 4px;');
+        console.log('%c Odesta Design System ', 'background: #12121a; color: #00d4aa; padding: 4px 8px; border: 1px solid #00d4aa; border-radius: 4px;');
     </script>
 </body>
 </html>
