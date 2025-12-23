@@ -1,6 +1,9 @@
 # Downloads and output
 downloads/
 output/
+analysis/
+*.pdf
+*.PDF
 
 # Python
 __pycache__/
