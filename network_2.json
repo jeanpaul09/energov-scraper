@@ -1,0 +1,154 @@
+{
+  "Result": [
+    {
+      "AttachmentReqFileRefID": "00b39290-fed5-4ea3-9826-6fc42802abc5",
+      "AttachmentRequiredFileID": null,
+      "Name": "Traffic Study",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "02d77405-b333-4c56-b343-d734ffb5d1ba",
+      "AttachmentRequiredFileID": null,
+      "Name": "Lake Slope / Excavation Plan",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "0a4ad836-f309-4dd8-8773-3f246ee492c0",
+      "AttachmentRequiredFileID": null,
+      "Name": "Landscape Certificate",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "0c5168d6-b170-4ec8-b99e-b147bd72ce63",
+      "AttachmentRequiredFileID": null,
+      "Name": "Floor Plan",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "131d8fc9-6d2f-4ed5-a7e0-5f8babe0cf1d",
+      "AttachmentRequiredFileID": null,
+      "Name": "Photos",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "358b856e-1708-4ad6-9f6c-5c217d45e203",
+      "AttachmentRequiredFileID": null,
+      "Name": "Survey",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "3bb950cf-eef6-4abf-b036-00247df75b88",
+      "AttachmentRequiredFileID": null,
+      "Name": "Legal Description",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "4f109bbc-bf0e-470f-a964-ef1de0395427",
+      "AttachmentRequiredFileID": null,
+      "Name": "Signage Plans",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "5d6ce9e1-da9f-43b4-929c-843e877f4cff",
+      "AttachmentRequiredFileID": null,
+      "Name": "Boundary Survey",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "7c129c0f-195b-4ac7-9532-6bfe95b4e599",
+      "AttachmentRequiredFileID": null,
+      "Name": "Site Plan",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "9b509041-0cc8-46dd-9399-e171034c098b",
+      "AttachmentRequiredFileID": null,
+      "Name": "Landscaping Plan (Not Required for single family residence, hours of operation, , liquor spacing or signage)",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "9c01cf26-a197-42a9-9ea2-07f678b77757",
+      "AttachmentRequiredFileID": null,
+      "Name": "Special Purpose Survey",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "a60ca857-b411-4f53-b219-7d725a0b7831",
+      "AttachmentRequiredFileID": null,
+      "Name": "Building Elevations",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "bace449f-1ca5-4bc0-ae4a-bbc4f745479d",
+      "AttachmentRequiredFileID": null,
+      "Name": "Application and supporting documents",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "c6c72ed4-ef2e-4895-a5f0-0fb9aa8bcc5b",
+      "AttachmentRequiredFileID": null,
+      "Name": "Exhibits",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "d0ebc64a-eabf-43fe-8e25-18ddd4fd6916",
+      "AttachmentRequiredFileID": null,
+      "Name": "Zoning Hearing Resolution(s) and Agreement(s)",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "f36dabe0-75cb-4a2a-929a-7977bf87cc32",
+      "AttachmentRequiredFileID": null,
+      "Name": "Liquor Survey",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    },
+    {
+      "AttachmentReqFileRefID": "fa558270-2eda-4d14-802b-ba6ac0ca8aaa",
+      "AttachmentRequiredFileID": null,
+      "Name": "Letter of Intent",
+      "Quantity": 1,
+      "IsRequired": false,
+      "AttachmentGroupID": "3cfd510c-6cb5-453b-aaa7-7bead4bf2ed0"
+    }
+  ],
+  "Success": true,
+  "ErrorMessage": "",
+  "ValidationErrorMessage": "",
+  "ConcurrencyErrorMessage": "",
+  "StatusCode": 200,
+  "BrokenRules": []
+}

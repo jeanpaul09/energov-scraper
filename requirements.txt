@@ -24,3 +24,6 @@ tqdm>=4.66.0
 # JSON schema validation
 pydantic>=2.5.0
 
+# API server
+fastapi>=0.104.0
+uvicorn>=0.24.0

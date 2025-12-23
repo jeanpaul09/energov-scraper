@@ -1,0 +1,15 @@
+{
+  "Result": {
+    "SettingId": 24,
+    "SoftwarePackageSettingID": 24,
+    "SettingName": "ShowCaseAttachmentNotes",
+    "SettingValue": "true",
+    "OldSettingValue": "true"
+  },
+  "Success": true,
+  "ErrorMessage": "",
+  "ValidationErrorMessage": "",
+  "ConcurrencyErrorMessage": "",
+  "StatusCode": 200,
+  "BrokenRules": []
+}

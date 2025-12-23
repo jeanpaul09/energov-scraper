@@ -1,0 +1,1544 @@
+[
+  {
+    "method": "GET",
+    "url": "https://fonts.googleapis.com/css?family=Lato",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Common.CommonResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/GetTenants",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/GetTenants",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/CommonSetting/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.Resources.SelfService/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/dashboard/notifications",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/GetSelectedTenantCulture/?loadHeader=true&loadBody=false&loadFooter=true",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/globalsetting/getglobalsetting",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/googleanalyticssetting/gettenantgoogleanalyticssetting",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenants/tenantfavicon/1",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=AllowFeeEstimator",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/walkmesetting/gettenantwalkmesetting",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=AllowPayInvoiceNotLoggedIn&softwarePackageName=EnerGov&tenantId=1",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=HideAllLicense&softwarePackageName=EnerGov&tenantId=1",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=HideAllOperationalPermit&softwarePackageName=EnerGov&tenantId=1",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=AllowPayInvoiceNotContact&tenantId=1",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=HideMyBusinessesTab",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/systemwide/systeminfo/energovapiversion",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/systemwide/systeminfo",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=RemoveRegistrationInFeeEstimator",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/Menu",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/MenuWithSubRecordsData",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/calendar/eventsCountForToday",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/calendar/eventsCountForToday",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/GetTenants",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/TcpSetting/isTylerPaymentsUsed/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenants/getTenantCommentsSetting",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/holds//search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/conditions/isentityconditionsexist/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/submittals/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/events/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/plans/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/workflow/summary/donut/2/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/summary/search/remainingfeestotoal",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/workflow/summary/activities/2/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Hold.HoldResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tyleridsetting/fileUploadChunkSize",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Common.CommonResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.EReview.EReviewResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/Home/GetTenants",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/workflow/summary/actionPermission/2/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energovsetting/applySubmitForReviewRule",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energovsetting/isereviewenable",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/attachments/search/capFileTypes/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/attachments/search/entityattachments/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2/true",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energovsetting/reviewmessage",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantsettings/SoftwarePackageSettings?settingName=ShowCaseAttachmentNotes",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantsettings/SoftwarePackageSettings?settingName=EReviewAllowResponses",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/ereviews/project/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Common.CommonResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/contacts/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/permits/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/permits/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/inspections/settings",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Inspection.InspectionResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/inspections/settings",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=UseUpdatedInspectionRequests",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantSettings/SoftwarePackageSettings?settingName=UseUpdatedInspectionRequests",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.Resources.SelfService/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/resource/SelfService.EnerGov.Resources.Common.CommonResource/keyvalues/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/ereviews/project/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/submittals/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/common/setup/sort",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/events/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/report/name?category=Plan&packageClassId=6ec5d53e-d8b2-4846-9274-bab1e8033802&packageTypeId=1a833460-3a99-40f0-92bf-1c245f5ae755",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/customfields/data/",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/plans/setup/1a833460-3a99-40f0-92bf-1c245f5ae755",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/plans/setup/contact/5c8c0206-814d-489c-95c5-d5d9b7b6b9ae/6ec5d53e-d8b2-4846-9274-bab1e8033802",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/fees/search/summary",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/fees/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/fees/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/inspections/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/inspections/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/inspections/search/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energovsetting/isereviewenable",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/address/locationData",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/63/5d/common.js",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/63/5d/util.js",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/fees/search",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/tenantsettings/SoftwarePackageSettings?settingName=EReviewAllowResponses",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/ereviews/project/c75ba542-3e32-48f5-8f7b-418d3f8c1b6d/2",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/entity/submittals/itemreviews/search/items",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://energov.miamidade.gov/energov_prod/selfservice/api/energov/invoice/anonymousinvoicedetaillist",
+    "headers": {
+      "sec-ch-ua-platform": "\"macOS\"",
+      "referer": "https://energov.miamidade.gov/EnerGov_Prod/SelfService/",
+      "tenantid": "1",
+      "sec-ch-ua": "\"HeadlessChrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "tyler-tenant-culture": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "tenantname": "MiamiDadeProd",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "tyler-tenanturl": "MiamiDadeProd",
+      "content-type": "application/json;charset=UTF-8"
+    }
+  }
+]

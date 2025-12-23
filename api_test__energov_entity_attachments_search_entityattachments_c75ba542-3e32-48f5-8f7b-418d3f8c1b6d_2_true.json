@@ -1,0 +1,12 @@
+{
+  "Result": {
+    "Attachments": null,
+    "UploadedFileCategories": []
+  },
+  "Success": true,
+  "ErrorMessage": "",
+  "ValidationErrorMessage": "",
+  "ConcurrencyErrorMessage": "",
+  "StatusCode": 200,
+  "BrokenRules": []
+}
