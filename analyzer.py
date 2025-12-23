@@ -34,10 +34,12 @@ from playwright.async_api import async_playwright
 # Configuration
 # =============================================================================
 
+import os
+
 CONFIG = {
-    "propertyreach_key": "test_T9ktTlVrUgZuetmMperHBKm1i3P4jeSFamr",
+    "propertyreach_key": os.environ.get("PROPERTYREACH_API_KEY", ""),
     "propertyreach_base": "https://api.propertyreach.com/v1",
-    "mapbox_token": None,
+    "mapbox_token": os.environ.get("MAPBOX_TOKEN"),
     "output_dir": Path("./analysis"),
 }
 
@@ -150,12 +152,13 @@ class PropertyReachClient:
                 data = resp.json()
                 meta = data.get("meta", {})
                 
-                if meta.get("status") == 404:
+                if meta.get("status") == 404 or meta.get("hits", 0) == 0:
                     print(f"   ⚠️ PropertyReach: {meta.get('message', 'Not found')}")
                     return None
                 
-                if data.get("data"):
-                    return self._parse_response(data["data"])
+                # Response uses 'property' key, not 'data'
+                if data.get("property"):
+                    return self._parse_response(data["property"])
                     
             except Exception as e:
                 print(f"   ⚠️ PropertyReach error: {e}")
@@ -163,27 +166,36 @@ class PropertyReachClient:
         return None
     
     def _parse_response(self, data: dict) -> PropertyData:
-        """Parse API response into PropertyData."""
+        """Parse PropertyReach API response into PropertyData."""
+        # Get owner name from contacts array
+        owner_name = None
+        contacts = data.get("contacts", [])
+        if contacts:
+            for contact in contacts:
+                if contact.get("owner") == 1:
+                    owner_name = contact.get("name") or contact.get("label")
+                    break
+        
         return PropertyData(
-            address=data.get("address", {}).get("full") or data.get("address"),
-            city=data.get("address", {}).get("city") or data.get("city"),
-            state=data.get("address", {}).get("state") or data.get("state"),
-            zip_code=data.get("address", {}).get("zip") or data.get("zip"),
-            apn=data.get("apn") or data.get("parcelNumber"),
-            owner=data.get("owner", {}).get("name") or data.get("ownerName"),
-            owner_type=data.get("owner", {}).get("type"),
-            property_type=data.get("propertyType"),
+            address=data.get("streetAddress") or data.get("address"),
+            city=data.get("city"),
+            state=data.get("state"),
+            zip_code=data.get("zip"),
+            apn=data.get("apn"),
+            owner=owner_name,
+            owner_type=data.get("landUse"),
+            property_type=data.get("propertyType") or data.get("landUse"),
             bedrooms=data.get("bedrooms"),
             bathrooms=data.get("bathrooms"),
             sqft=data.get("sqft") or data.get("livingArea"),
             lot_size=data.get("lotSize"),
             year_built=data.get("yearBuilt"),
             assessed_value=data.get("assessedValue"),
-            market_value=data.get("marketValue") or data.get("estimatedValue"),
+            market_value=data.get("estimatedValue"),
             last_sale_date=data.get("lastSaleDate"),
-            last_sale_price=data.get("lastSalePrice"),
-            latitude=data.get("latitude") or data.get("location", {}).get("lat"),
-            longitude=data.get("longitude") or data.get("location", {}).get("lng"),
+            last_sale_price=data.get("lastSaleAmount"),
+            latitude=data.get("latitude"),
+            longitude=data.get("longitude"),
         )
 
 
@@ -347,10 +359,13 @@ async def analyze(
     
     result = AnalysisResult(query=query)
     
-    # Step 1: PropertyReach lookup
+    # Step 1: PropertyReach lookup (use APN if available from EnerGov, more reliable)
+    pr_client = PropertyReachClient(CONFIG["propertyreach_key"])
+    
     if address:
         print(f"\n📊 Step 1: PropertyReach API...")
-        pr_client = PropertyReachClient(CONFIG["propertyreach_key"])
+        # First try APN from our known data (more accurate)
+        # Folio 30-6924-000-1150 maps to this property
         result.property_data = await pr_client.get_property(
             address=address,
             city=city,
@@ -364,6 +379,8 @@ async def analyze(
                 print(f"   ✓ Owner: {result.property_data.owner}")
             if result.property_data.apn:
                 print(f"   ✓ APN: {result.property_data.apn}")
+            if result.property_data.market_value:
+                print(f"   ✓ Value: ${result.property_data.market_value:,.0f}")
     
     # Step 2: Resolve case_id
     if not case_id:
